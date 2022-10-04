@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY . /app
 
+RUN yarn install
+
 RUN yarn run build
 
 RUN ls -la build
