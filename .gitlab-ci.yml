@@ -1,0 +1,13 @@
+stages:
+  - build
+  - deploy
+
+build_production:
+  stage: build
+  script:
+    - cystack-deployer
+  tags:
+    - cs_protecting
+  only:
+    - main
+    - tags
